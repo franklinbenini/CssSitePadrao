@@ -1,0 +1,186 @@
+
+/**********************************************************************
+                            COLUNAS (LARGURAS)
+**********************************************************************/
+
+/* Para celulares: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* Para tablets: */
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* Para desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+
+/**********************************************************************
+                             TEXTO
+**********************************************************************/
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+/**********************************************************************
+                             IMAGENS
+**********************************************************************/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/**********************************************************************
+                             BOTÕES
+**********************************************************************/
+.btn
+{    
+    background-color: #21b2d6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;        
+}
+
+.btn:hover {    
+    color: white;
+    background-color: #21a3c4;        
+    box-shadow: 3px 4px silver;
+  }
+  
+/**********************************************************************
+                               FORMS
+**********************************************************************/
+
+input[type=text], select, textarea {
+    width: 98%;
+    padding: 12px;
+    border: 1px solid #ccc;    
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=text]:focus {
+    outline: none;
+    background-color: #f5f8f8;    
+    border-color: #21b2d6;
+}
+
+select:focus {
+    outline: none;
+    background-color: #f5f8f8;
+    border-color: #21b2d6;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: #f5f8f8;
+    border-color: #21b2d6;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #21b2d6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #21a3c4;
+    box-shadow: 3px 4px silver;
+}
+
+.form-container {
+    border: 1px solid;
+    border-color: #21b2d6;
+    border-radius: 5px;    
+    background-color: #f8fcff;
+    padding: 20px;    
+    margin-left: 6px;
+    margin-right: 6px;    
+}
+
+.form-col-10 {
+    float: left;
+    width: 10%;
+    margin-top: 6px;
+}
+
+.form-col-20 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+
+.form-col-80 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+
+.form-col-90 {
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+
+.form-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Layout Responsivo - Quando a tela for menor que 600px de largura, faz as duas colunas ficarem uma em cima da outra ao invés de uma do lado da outra */
+@media screen and (max-width: 600px) {
+    .form-col-10, .form-col-90, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .form-col-20, .form-col-80, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    input[type=text], select, textarea {
+        width: 95%;     
+    }
+}
