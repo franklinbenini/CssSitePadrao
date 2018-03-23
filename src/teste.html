@@ -17,61 +17,105 @@
 </head>
 
 <body>
-  
-  <h1> Olá mundo !</h1>
+  <div class="container">
+    <h1> Olá mundo !</h1>
 
-  <button type="button" class="btn">Botão 1</button>
-  <button type="button" class="btn">Botão 2</button>
-  <button type="button" class="btn">Botão 3</button>
+    <button type="button" class="btn">Botão 1</button>
+    <button type="button" class="btn">Botão 2</button>
+    <button type="button" class="btn">Botão 3</button>
+  </div>
 
+  <div class="container">
+    <h2>Form Responsivo</h2>
+    <p>Redimensione a janela para ver o efeito. Quando a tela for menor que 600px de largura, faz as duas colunas ficarem uma em cima da outra ao invés de uma do lado da outra.</p>
 
-  <h2>Responsive Form</h2>
-<p>Resize the bform-rowser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
-
-<div class="form-container">
-  <form action="/action_page.php">
-    <div class="form-row">
-      <div class="form-col-20">
-        <label for="fname">First Name</label>
-      </div>
-      <div class="form-col-80">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      </div>
+    <div class="form-container">
+      <form action="/action_page.php">
+        <div class="form-row">
+          <div class="form-col-20">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="form-col-80">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col-20">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="form-col-80">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col-20">
+            <label for="country">Country</label>
+          </div>
+          <div class="form-col-80">
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col-20">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-col-80">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
     </div>
-    <div class="form-row">
-      <div class="form-col-20">
-        <label for="lname">Last Name</label>
-      </div>
-      <div class="form-col-80">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-col-20">
-        <label for="country">Country</label>
-      </div>
-      <div class="form-col-80">
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-col-20">
-        <label for="subject">Subject</label>
-      </div>
-      <div class="form-col-80">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      </div>
-    </div>
-    <div class="form-row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
 </div>
 
+<div class="container">
+  <h2>Tabela Responsiva</h2>
+  <p>Ao redimensionar a tabela para uma largura menor que 600px, o header vai para esquerda e os dados para a direita</p>
+
+  <table>
+    <caption>Statement Summary</caption>
+    <thead>
+      <tr>
+        <th scope="col">Account</th>
+        <th scope="col">Due Date</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Period</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Account">Visa - 3412</td>
+        <td data-label="Due Date">04/01/2016</td>
+        <td data-label="Amount">$1,190</td>
+        <td data-label="Period">03/01/2016 - 03/31/2016</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Account">Visa - 6076</td>
+        <td data-label="Due Date">03/01/2016</td>
+        <td data-label="Amount">$2,443</td>
+        <td data-label="Period">02/01/2016 - 02/29/2016</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Account">Corporate AMEX</td>
+        <td data-label="Due Date">03/01/2016</td>
+        <td data-label="Amount">$1,181</td>
+        <td data-label="Period">02/01/2016 - 02/29/2016</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Acount">Visa - 3412</td>
+        <td data-label="Due Date">02/01/2016</td>
+        <td data-label="Amount">$842</td>
+        <td data-label="Period">01/01/2016 - 01/31/2016</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
   <script src="js/sample.js"></script>  
 </body>
