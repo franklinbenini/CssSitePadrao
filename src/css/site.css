@@ -1,44 +1,3 @@
-
-/**********************************************************************
-                            COLUNAS (LARGURAS)
-**********************************************************************/
-
-/* Para celulares: */
-[class*="col-"] {
-    width: 100%;
-}
-@media only screen and (min-width: 600px) {
-    /* Para tablets: */
-    .col-t-1 {width: 8.33%;}
-    .col-t-2 {width: 16.66%;}
-    .col-t-3 {width: 25%;}
-    .col-t-4 {width: 33.33%;}
-    .col-t-5 {width: 41.66%;}
-    .col-t-6 {width: 50%;}
-    .col-t-7 {width: 58.33%;}
-    .col-t-8 {width: 66.66%;}
-    .col-t-9 {width: 75%;}
-    .col-t-10 {width: 83.33%;}
-    .col-t-11 {width: 91.66%;}
-    .col-t-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-    /* Para desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
-
-
 /**********************************************************************
                              TEXTO
 **********************************************************************/
@@ -48,6 +7,38 @@ html {
 
 body {
     line-height: 1.25;
+}
+
+.texto-pequeno {
+    font-size:small;
+}
+
+.texto-medio {
+    font-size:medium;
+}
+
+.texto-grande {
+    font-size:large;
+}
+
+.texto-italico {
+    font-style: italic;
+}
+
+.texto-negrito {
+    font-weight: bold;
+}
+
+.texto-maiusculo {
+    text-transform: uppercase;
+}
+
+.texto-minusculo {
+    text-transform: lowercase;
+}
+
+.texto-capitalize { /* 1a letra maiuscula, demais minusculas */
+    text-transform: capitalize;
 }
 
 /**********************************************************************
@@ -139,7 +130,7 @@ input[type=submit]:hover {
     background-color: #f8fcff;
     padding: 20px;    
     margin-left: 6px;
-    margin-right: 6px;    
+    margin-right: 6px;           
 }
 
 .form-col-10 {
@@ -281,13 +272,81 @@ table {
     }
 }
 
+
+/**********************************************************************
+                             GRID
+**********************************************************************/
+
+.grid-container {
+    width: 100%; 
+    max-width: 1850px;   
+}
+
+.row:before, 
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
+
+[class*='col-'] {
+    float: left; 
+    min-height: 1px; 
+    width: 16.66%;    
+}
+
+.col-2{ width: 16.66%;  }
+.col-4{ width: 33.33%;  }
+.col-6{ width: 50%;     }
+.col-8{ width: 66.66%;  }
+.col-10{ width: 83.33%; }
+.col-12{ width: 100%;   }
+
+.outline, .outline *{
+    outline: 1px solid black; 
+}
+
+[class*='col-'] > p {    
+    padding: 0;
+    margin: 0;
+    text-align: center;     
+    }
+
+@media all and (max-width:728px){
+    .col-2{ width: 33.33%;  }
+    .col-4{ width: 50%;     }
+    .col-6{ width: 83.33%;  }
+    .col-8{ width: 100%;    }
+    .col-10{ width: 100%;   }
+    .col-12{ width: 100%;   }
+
+    .row .col-4:last-of-type{
+        width: 100%; 
+    }
+
+    .row .col-10 ~ .col-2{
+        width: 100%; 
+    }
+}
+
+@media all and (max-width:600px){
+    .col-2{ width: 50%;     }
+    .col-4{ width: 100%;    }
+    .col-6{ width: 100%;    }
+    .col-8{ width: 100%;    }
+    .col-10{ width: 100%;   }
+    .col-12{ width: 100%;   }
+}
+
 /**********************************************************************
                                OUTROS
 **********************************************************************/
 
 .container {
     border: 0px;            
-    padding: 20px;
-    margin-left: 6px;
-    margin-right: 6px;    
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;    
 }
+
+
