@@ -340,9 +340,82 @@ input[type=submit]:hover {
 }
 
 /**********************************************************************
-                               MENU SUPERIOR
+                        ALERT (MESSAGEBOX)
 **********************************************************************/
 
+.msg-erro {
+    padding: 20px;
+    background-color: #f44336; 
+    color: white;
+    margin-bottom: 15px;
+}
+
+.msg-sucesso {
+    padding: 20px;
+    background-color: #4CAF50; 
+    color: white;
+    margin-bottom: 15px;
+}
+
+.msg-info {
+    padding: 20px;
+    background-color: #2196F3; 
+    color: white;
+    margin-bottom: 15px;
+}
+
+.msg-cuidado {
+    padding: 20px;
+    background-color: #ff9800; 
+    color: white;
+    margin-bottom: 15px;
+}
+
+.botaofechar {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botaofechar:hover {
+    color: black;
+}
+
+/**********************************************************************
+          BREADCRUMB (NAVEGAÇÃO Ex.: Home/Pictures/Summer/Italy)
+**********************************************************************/
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
 
 /**********************************************************************
                                OUTROS
